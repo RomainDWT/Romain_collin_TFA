@@ -196,7 +196,7 @@ body {
 @media (min-width: 768px) {
   .title {
     margin: 100px 20px 0;
-    font-size: 228px;
+    font-size: 152px;
     line-height: 100%;
   }
   .title__anim {
@@ -204,27 +204,23 @@ body {
   }
   .intro p {
     margin-top: 0;
-    font-size: 45px;
+    font-size: 30px;
   }
   .intro__dégradé {
-    height: 300px;
-    background: linear-gradient(to bottom, #4C606B, #28405C);
+    height: 200px;
   }
 }
 @media (min-width: 1200px) {
   .title {
-    margin-top: 100px;
-    line-height: 100%;
+    font-size: 228px;
   }
   .title__anim {
     display: inline-block;
   }
   .intro p {
-    margin-top: 0;
     font-size: 45px;
   }
   .intro__dégradé {
     height: 300px;
-    background: linear-gradient(to bottom, #4C606B, #28405C);
   }
 }/*# sourceMappingURL=app.css.map */

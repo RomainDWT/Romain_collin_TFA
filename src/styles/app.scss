@@ -216,7 +216,7 @@ body{
 @media(min-width:768px){
     .title{
         margin: 100px 20px 0;
-        font-size: 228px;
+        font-size: 152px;
         line-height: 100%;
        
         &__anim{
@@ -228,25 +228,19 @@ body{
      
         p{
             margin-top: 0;
-            font-size: 45px;
+            font-size: 30px;
         }
      
      
         &__dégradé{
-            height: 300px;
-            background: linear-gradient(
-                to bottom,
-                #4C606B,
-                #28405C,
-            );
+            height: 200px;
         }
      }
 }
 // DESKTOP
 @media(min-width:1200px){
     .title{
-        margin-top: 100px;
-        line-height: 100%;
+        font-size: 228px;
        
         &__anim{
             display: inline-block;
@@ -256,18 +250,12 @@ body{
      .intro{
      
         p{
-            margin-top: 0;
             font-size: 45px;
         }
      
      
         &__dégradé{
             height: 300px;
-            background: linear-gradient(
-                to bottom,
-                #4C606B,
-                #28405C,
-            );
         }
      }
 }
