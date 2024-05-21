@@ -183,7 +183,7 @@ body {
 }
 .intro p {
   font-family: "IBM Plex Serif", serif;
-  margin-top: 18px;
+  margin: 18px 18px 0;
   text-align: center;
   font-size: 18px;
   line-height: 150%;
@@ -223,4 +223,201 @@ body {
   .intro__dégradé {
     height: 300px;
   }
+}
+.aboutme__width {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutme {
+  background-color: #28425B;
+}
+.aboutme__title {
+  font-family: "Bebas Neue", sans-serif;
+  color: #D696C3;
+  font-size: 41px;
+  line-height: 100%;
+  text-align: center;
+  font-weight: 200;
+  margin: 0 18px;
+}
+.aboutme p.para--first {
+  margin: 36px 18px 18px;
+}
+.aboutme p {
+  margin: 0 18px;
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "IBM Plex Serif", serif;
+}
+.aboutme__video {
+  margin-top: 36px;
+  width: 100%;
+}
+.aboutme__video2 {
+  display: none;
+}
+.aboutme__dégradé {
+  height: 126px;
+  background: linear-gradient(to bottom, #28425B, #4C606B);
+}
+
+@media (min-width: 768px) {
+  .aboutme__grille {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto;
+    gap: 0 20px;
+  }
+  .aboutme__title {
+    margin: 0;
+    z-index: 1;
+    font-size: 101px;
+    line-height: 80%;
+    grid-column: 2/7;
+    text-align: start;
+  }
+  .aboutme p.para--first {
+    margin: 40px 0px 20px;
+  }
+  .aboutme__container {
+    position: relative;
+    margin-top: 4px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto;
+    gap: 0 20px;
+  }
+  .aboutme__container :nth-child(1) {
+    grid-column: 2/7;
+  }
+  .aboutme__container :nth-child(2) {
+    margin: 0;
+    grid-column: 2/7;
+  }
+  .aboutme__container :nth-child(3) {
+    margin: 0 20px;
+    height: 100%;
+    position: absolute;
+    display: block;
+    grid-column: 7/9;
+  }
+  .aboutme__video {
+    display: none;
+  }
+  .aboutme__dégradé {
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .aboutme {
+    background-color: #28405C;
+  }
+  .aboutme__grille {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 0 20px;
+  }
+  .aboutme__title {
+    margin: 0;
+    z-index: 1;
+    font-size: 152px;
+    line-height: 80%;
+    grid-column: 2/9;
+    text-align: start;
+  }
+  .aboutme p.para--first {
+    margin: 40px 0px 20px;
+  }
+  .aboutme__container {
+    position: relative;
+    margin-top: 4px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 0 20px;
+  }
+  .aboutme__container :nth-child(1) {
+    grid-column: 2/7;
+  }
+  .aboutme__container :nth-child(2) {
+    margin: 0;
+    grid-column: 2/7;
+  }
+  .aboutme__container :nth-child(3) {
+    height: 100%;
+    position: absolute;
+    display: block;
+    grid-column: 8/11;
+  }
+  .aboutme__video {
+    display: none;
+  }
+  .aboutme__dégradé {
+    height: 300px;
+  }
+}
+.projet__width {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projet__title {
+  margin-bottom: 54px;
+  font-family: "Bebas Neue", sans-serif;
+  color: #FFFFFF;
+  font-size: 41px;
+  line-height: 100%;
+  text-align: center;
+  font-weight: 200;
+}
+.projet__linktab {
+  font-family: "Bebas Neue", sans-serif;
+  text-decoration: none;
+  font-size: 27px;
+  line-height: 100%;
+  display: block;
+  padding: 18px 0 16px;
+  color: #FFFFFF;
+}
+.projet__projet {
+  display: block;
+  margin: 18px 0 36px;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 18px;
+  line-height: 150%;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.projet__tabcontent :nth-child(1) {
+  font-size: 18px;
+  line-height: 150%;
+  font-family: "IBM Plex Serif", serif;
+  display: block;
+}
+.projet__hidden {
+  display: none;
+}
+.projet__linktab--active {
+  color: #D696C3;
+}
+.projet__grille {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+}
+.projet__grid {
+  grid-column: 2/6;
+}
+.projet__underline2 {
+  width: 100%;
+  height: 1px;
+  background-color: #FFFFFF;
+}
+.projet__dégradé {
+  height: 126px;
+  background: linear-gradient(to bottom, #4C606B, #2E4A66);
 }/*# sourceMappingURL=app.css.map */
