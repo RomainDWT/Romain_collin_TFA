@@ -1,0 +1,15 @@
+@import 'utils/variables';
+@import 'components/type';
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #4C606B;
+    color: #FFFFFF;
+}
+// Header //////////////////////////////////////////////////////////////////////
