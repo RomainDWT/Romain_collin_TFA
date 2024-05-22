@@ -181,6 +181,7 @@ body {
   }
   .intro__dégradé {
     height: 300px;
+    background: linear-gradient(to bottom, #4C606B, #28405C);
   }
 }
 .aboutme__width {
@@ -198,7 +199,7 @@ body {
   font-size: 41px;
   line-height: 100%;
   text-align: center;
-  font-weight: 200;
+  font-weight: 400;
   margin: 0 18px;
 }
 .aboutme p.para--first {
@@ -231,18 +232,15 @@ body {
   }
   .aboutme__title {
     margin: 0;
-    z-index: 1;
     font-size: 101px;
     line-height: 80%;
-    grid-column: 2/7;
+    grid-column: 2/8;
     text-align: start;
   }
   .aboutme p.para--first {
     margin: 40px 0px 20px;
   }
   .aboutme__container {
-    position: relative;
-    margin-top: 4px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: auto;
@@ -255,13 +253,6 @@ body {
     margin: 0;
     grid-column: 2/7;
   }
-  .aboutme__container :nth-child(3) {
-    margin: 0 20px;
-    height: 100%;
-    position: absolute;
-    display: none;
-    grid-column: 7/9;
-  }
   .aboutme__video {
     display: none;
   }
@@ -270,37 +261,21 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .aboutme {
+    background-color: #28405C;
+  }
   .aboutme__grille {
-    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    gap: 0 20px;
   }
   .aboutme__title {
-    margin: 0;
     z-index: 1;
     font-size: 152px;
-    line-height: 80%;
     grid-column: 2/9;
-    text-align: start;
-  }
-  .aboutme p.para--first {
-    margin: 40px 0px 20px;
   }
   .aboutme__container {
     position: relative;
     margin-top: 4px;
-    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    gap: 0 20px;
-  }
-  .aboutme__container :nth-child(1) {
-    grid-column: 2/7;
-  }
-  .aboutme__container :nth-child(2) {
-    margin: 0;
-    grid-column: 2/7;
   }
   .aboutme__container :nth-child(3) {
     height: 100%;
@@ -308,21 +283,19 @@ body {
     display: block;
     grid-column: 8/11;
   }
-  .aboutme__video {
-    display: none;
-  }
   .aboutme__dégradé {
     height: 300px;
+    background: linear-gradient(to bottom, #28405C, #4C606B);
   }
 }
 .projet__width {
-  max-width: 1400px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .projet__title {
-  margin-bottom: 54px;
+  margin-bottom: 36px;
   font-family: "Bebas Neue", sans-serif;
   color: #FFFFFF;
   font-size: 41px;
@@ -336,8 +309,10 @@ body {
   font-size: 27px;
   line-height: 100%;
   display: block;
-  padding: 18px 0 16px;
+  padding: 18px 0 15px;
   color: #FFFFFF;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 .projet__projet {
   display: block;
@@ -347,12 +322,6 @@ body {
   line-height: 150%;
   text-decoration: none;
   color: #FFFFFF;
-}
-.projet__tabcontent :nth-child(1) {
-  font-size: 18px;
-  line-height: 150%;
-  font-family: "IBM Plex Serif", serif;
-  display: block;
 }
 .projet__hidden {
   display: none;
@@ -399,7 +368,7 @@ body {
   }
   .projet__projet {
     margin: 20px 0 40px;
-    font-size: 20px;
+    font-size: 30px;
   }
   .projet__tabcontent :nth-child(1) {
     font-size: 20px;
@@ -408,7 +377,7 @@ body {
     grid-template-columns: repeat(10, 1fr);
   }
   .projet__grid {
-    grid-column: 3/10;
+    grid-column: 2/8;
   }
   .projet__dégradé {
     height: 200px;
@@ -416,36 +385,21 @@ body {
 }
 @media (min-width: 1200px) {
   .projet__container2 {
-    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    gap: 0 20px;
   }
   .projet__title {
-    margin-bottom: 40px;
     grid-column: 2/9;
     font-size: 152px;
-    line-height: 100%;
-    text-align: start;
   }
   .projet__linktab {
     font-size: 101px;
-    line-height: 100%;
-    padding: 20px 0 10px;
-  }
-  .projet__projet {
-    margin: 20px 0 40px;
-    font-size: 20px;
-  }
-  .projet__tabcontent :nth-child(1) {
-    font-size: 20px;
-    grid-column: 1/6;
+    padding: 20px 0 9px;
   }
   .projet__grille {
     grid-template-columns: repeat(12, 1fr);
   }
   .projet__grid {
-    grid-column: 3/9;
+    grid-column: 2/9;
   }
   .projet__dégradé {
     height: 300px;
