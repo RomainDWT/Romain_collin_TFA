@@ -35,9 +35,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 0 1px 0;
 }
 .header__logo {
-  margin: 29px 18px 18px;
+  margin: 8px 18px 0px;
   width: 40px;
   height: 40px;
 }
@@ -73,8 +74,11 @@ body {
 }
 
 @media (min-width: 768px) {
+  .header__maincontainer {
+    padding: 0;
+  }
   .header__logo {
-    margin: 20px 40px;
+    margin: 6px 40px 0;
     width: 45px;
     height: 45px;
   }
@@ -100,50 +104,6 @@ body {
   }
   .header__ul :nth-child(4) {
     font-size: 20px;
-  }
-  .header__underline {
-    margin-top: auto;
-  }
-  .header__ul {
-    display: flex;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
-  }
-  .header__ul > li:nth-last-child(-n+2) {
-    margin-right: 40px;
-  }
-}
-@media (min-width: 1200px) {
-  .header__logo {
-    margin: 20px 40px;
-    width: 45px;
-    height: 45px;
-  }
-  .header__ul {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 20px;
-    letter-spacing: 2px;
-  }
-  .header__ul :nth-child(1) {
-    display: block;
-    text-decoration: none;
-    color: #FFFFFF;
-  }
-  .header__ul :nth-child(2) {
-    display: block;
-    text-decoration: none;
-    color: #FFFFFF;
-  }
-  .header__ul :nth-child(3) {
-    display: block;
-    text-decoration: none;
-    color: #FFFFFF;
-  }
-  .header__ul :nth-child(4) {
-    font-size: 20px;
-  }
-  .header__underline {
-    margin-top: auto;
   }
   .header__ul {
     display: flex;
@@ -747,9 +707,9 @@ body {
 }
 .photoshop {
   background-color: #2E4A66;
+  padding-top: 72px;
 }
 .photoshop__title {
-  padding-top: 72px;
   display: flex;
   color: #D696C3;
   font-size: 27px;
@@ -775,6 +735,7 @@ body {
 @media (min-width: 768px) {
   .photoshop {
     background-color: #2E4A66;
+    padding-top: 200px;
   }
   .photoshop__grille {
     display: grid;
@@ -785,7 +746,6 @@ body {
   .photoshop__title {
     display: block;
     grid-column: 2/8;
-    padding-top: 200px;
     font-size: 101px;
     line-height: 100%;
     color: #D696C3;
@@ -827,8 +787,7 @@ body {
 @media (min-width: 1200px) {
   .photoshop {
     background-color: #2E4A66;
-  }
-  .photoshop__grille {
+    padding-top: 200px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
@@ -837,13 +796,18 @@ body {
   .photoshop__title {
     display: block;
     grid-column: 2/8;
-    padding-top: 200px;
     font-size: 101px;
     line-height: 100%;
     color: #D696C3;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 200;
     margin-bottom: 20px;
+  }
+  .photoshop__contenu {
+    grid-column: 2/7;
+  }
+  .photoshop__container {
+    grid-column: 7/12;
   }
   .photoshop__grid {
     display: grid;

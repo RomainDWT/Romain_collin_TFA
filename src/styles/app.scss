@@ -23,10 +23,11 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 0 1px 0;
     }
 
     &__logo{
-        margin: 29px 18px 18px;
+        margin: 8px 18px 0px;
         width: 40px;
         height: 40px;
     }
@@ -70,8 +71,12 @@ body{
 @media(min-width:768px){
     .header{
 
+        &__maincontainer{
+            padding: 0;
+        }
+
         &__logo{
-            margin: 20px 40px;
+            margin: 6px 40px 0;
             width: 45px;
             height: 45px;
         }
@@ -99,10 +104,6 @@ body{
             :nth-child(4){
                 font-size: 20px;
             }
-        }
-
-        &__underline{
-            margin-top: auto;
         }
     }
     .header__ul{
@@ -114,52 +115,7 @@ body{
     }
 }
 // DESKTOP
-@media(min-width:1200px){
-    .header{
-
-        &__logo{
-            margin: 20px 40px;
-            width: 45px;
-            height: 45px;
-        }
-    
-        &__ul{
-            font-family: "Bebas Neue", sans-serif;
-            font-size: 20px;
-            letter-spacing: 2px;
-    
-            :nth-child(1){
-                display: block;
-                text-decoration: none;
-                color: #FFFFFF;
-            }
-            :nth-child(2){
-                display: block;
-                text-decoration: none;
-                color: #FFFFFF;
-            }
-            :nth-child(3){
-                display: block;
-                text-decoration: none;
-                color: #FFFFFF;
-            }
-            :nth-child(4){
-                font-size: 20px;
-            }
-        }
-
-        &__underline{
-            margin-top: auto;
-        }
-    }
-    .header__ul{
-        display: flex;
-        column-gap: 40px;
-    }
-    .header__ul > li:nth-last-child(-n+2){
-        margin-right: 40px;
-    }
-}
+// Pareil que pour tablette
 
 //SECTION 1 -- INTRODUCTION ////////////////////////////////////////////////////
 .title{
@@ -925,18 +881,21 @@ body{
 // SECTION 6 -- PHOTOSHOP ////////////////////////////////////////////////////
 .photoshop{
     background-color: #2E4A66;
-
+    padding-top: 72px;
+ 
+ 
     &__title{
-        padding-top: 72px;
         display: flex;
         color: #D696C3;
         font-size: 27px;
         line-height: 100%;
         justify-content: center;
     }
-
+ 
+ 
     &__grid{
-
+ 
+ 
         p{
             font-size: 18px;
             line-height: 150%;
@@ -944,34 +903,36 @@ body{
             padding: 18px 18px 0;
         }
     }
-
+ 
+ 
     &__container{
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
+ 
+ 
     &__poster{
         margin: 36px 18px 0;
         width: 324px;
     }
-}
-// TABLETTE
-@media(min-width:768px){
+ }
+ // TABLETTE
+ @media(min-width:768px){
     .photoshop{
         background-color: #2E4A66;
-    
+        padding-top: 200px;
+   
         &__grille{
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: auto;
             gap: 0 20px;
         }
-    
+   
         &__title{
             display: block;
             grid-column: 2/ 8;
-            padding-top: 200px;
             font-size: 101px;
             line-height: 100%;
             color: #D696C3;
@@ -979,14 +940,14 @@ body{
             font-weight: 200;
             margin-bottom: 20px;
         }
-    
+   
         &__grid{
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: auto;
             gap: 0 20px;
             position: relative  ;
-    
+   
             :nth-child(1){
                 grid-column: 2/7;
             }
@@ -998,7 +959,7 @@ body{
                 position: absolute;
             }
         }
-    
+   
         p{
             padding: 0;
             margin-top: 20px;
@@ -1006,30 +967,27 @@ body{
             line-height: 150%;
             font-family: "IBM Plex Serif", serif;
         }
-    
+   
         &__poster{
             object-fit: cover;
             width: 216px;
             height: 100%;
         }
     }
-}
-// DESKTOP
-@media(min-width:1200px){
+ }
+ // DESKTOP
+ @media(min-width:1200px){
     .photoshop{
         background-color: #2E4A66;
-    
-        &__grille{
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: auto;
-            gap: 0 20px;
-        }
-    
+        padding-top: 200px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        gap: 0 20px;
+   
         &__title{
             display: block;
             grid-column: 2/ 8;
-            padding-top: 200px;
             font-size: 101px;
             line-height: 100%;
             color: #D696C3;
@@ -1037,14 +995,22 @@ body{
             font-weight: 200;
             margin-bottom: 20px;
         }
-    
+
+        &__contenu{
+            grid-column: 2/7;
+        }
+
+        &__container{
+            grid-column: 7/12;
+        }
+   
         &__grid{
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-template-rows: auto;
             gap: 0 20px;
             position: relative  ;
-    
+   
             :nth-child(1){
                 grid-column: 2/7;
             }
@@ -1056,7 +1022,7 @@ body{
                 position: absolute;
             }
         }
-    
+   
         p{
             padding: 0;
             margin-top: 20px;
@@ -1064,14 +1030,15 @@ body{
             line-height: 150%;
             font-family: "IBM Plex Serif", serif;
         }
-    
+   
         &__poster{
             object-fit: cover;
             width: 216px;
             height: 100%;
         }
     }
-}
+ }
+ 
 
 // SECTION 7 -- FOOTER
 .footer{

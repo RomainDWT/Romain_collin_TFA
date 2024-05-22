@@ -1,33 +1,38 @@
 "use strict";
 
 let links = document.querySelectorAll(".projet__linktab");
+
 for (let link of links) {
-   link.addEventListener("click", linkTrigger);
+    link.addEventListener('click', () =>{
+        event.preventDefault();
+
+        if(link.classList.contains("projet__linktab--active")){
+            clearAll();
+            link.classList.remove("projet__linktab--active");
+            let contentId = link.getAttribute("href");
+            let content = document.querySelector(contentId);
+            content.classList.add("projet__hidden");
+
+        } else{
+            clearAll()
+            link.classList.add("projet__linktab--active");
+            let contentId = link.getAttribute("href");
+            let content = document.querySelector(contentId);
+            content.classList.remove("projet__hidden");
+        }
+    })
 }
 
-function linkTrigger(event) {
-   event.preventDefault(); // Empêche le comportement par défaut du lien
+function clearAll(){
+    let activeLinks = document.querySelectorAll(".projet__linktab");
+    for (let activeLink of activeLinks) {
+        activeLink.classList.remove("projet__linktab--active");
+    }
 
-   // Désactive tous les liens actifs
-//    let list = event.currentTarget.closest("a");
-   let activeLinks = document.querySelectorAll(".projet__linktab");
-   for (let activeLink of activeLinks) {
-       activeLink.classList.remove("projet__linktab--active");
-   }
-
-   let tabs = document.querySelectorAll(".projet__tabcontent");
-   for (let tab of tabs) {
-       tab.classList.add("projet__hidden");
-   }
-
-   // Marque le lien cliqué comme actif
-   let clickedLink = event.currentTarget;
-   clickedLink.classList.add("projet__linktab--active");
-
-   // Affiche le contenu lié au lien cliqué
-   let contentId = clickedLink.getAttribute("href");
-   let content = document.querySelector(contentId);
-   content.classList.remove("projet__hidden");
+    let tabs = document.querySelectorAll(".projet__tabcontent");
+    for (let tab of tabs) {
+        tab.classList.add("projet__hidden");
+    }
 }
 
 //Scroll horizontal
