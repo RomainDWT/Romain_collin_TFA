@@ -349,7 +349,7 @@ body{
                 margin: 0 20px;
                 height: 100%;
                 position: absolute;
-                display: block;
+                display: none;
                 grid-column: 7/9;
             }
         }
@@ -366,7 +366,6 @@ body{
 // DESKTOP
 @media(min-width:1200px){
     .aboutme{
-        background-color: #28405C;
 
         &__grille{
             display: grid;
@@ -500,5 +499,636 @@ body{
             #4C606B,
             #2E4A66,
         );
+    }
+}
+// TABLETTE
+@media(min-width:768px){
+    .projet{
+
+        &__container2{
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: auto;
+            gap: 0 20px;
+        }
+
+        &__title{
+            margin-bottom: 60px;
+            grid-column: 2/9;
+            font-size: 101px;
+            line-height: 100%;
+            text-align: start;
+        }
+
+        &__linktab{
+            font-size: 68px;
+            line-height: 100%;
+            padding: 20px 0 12px;
+        }
+
+        &__projet{
+            margin: 20px 0 40px;
+            font-size: 20px;
+        }
+
+        &__tabcontent{
+        
+            :nth-child(1){
+                font-size: 20px;
+            }
+        }
+
+
+        &__grille{
+            grid-template-columns: repeat(10, 1fr);
+        }
+
+        &__grid{
+            grid-column: 3/10;
+        }
+
+        &__dégradé{
+            height: 200px;
+        }
+    }
+}
+// DESKTOP
+@media(min-width:1200px){
+    .projet{
+
+        &__container2{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            gap: 0 20px;
+        }
+        &__title{
+            margin-bottom: 40px;
+            grid-column: 2/9;
+            font-size: 152px;
+            line-height: 100%;
+            text-align: start;
+        }
+
+        &__linktab{
+            font-size: 101px;
+            line-height: 100%;
+            padding: 20px 0 10px;
+        }
+
+        &__projet{
+            margin: 20px 0 40px;
+            font-size: 20px;
+        }
+
+        &__tabcontent{
+        
+            :nth-child(1){
+                font-size: 20px;
+                grid-column: 1/6;
+            }
+        }
+
+
+    &__grille{
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    &__grid{
+        grid-column: 3/9;
+    }
+
+    &__dégradé{
+        height: 300px;
+    }
+}
+}
+
+// SECTION 4 -- LE STAGE /////////////////////////////////////////////////////////
+.stage{
+    background-color: #2E4A66;
+
+    &__title{
+        font-size: 41px;
+        line-height: 100%;
+        color: #D696C3;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 200;
+        text-align: center;
+        margin-bottom: 36px;
+    }
+
+    &__secondtitle{
+        font-size: 27px;
+        line-height: 100%;
+        color: #D696C3;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 200;
+    }
+
+    p{
+        margin-top: 18px;
+        font-size: 18px;
+        line-height: 150%;
+        font-family: "IBM Plex Serif", serif;
+        width: 300px;
+    }
+
+    &__contenu{
+        display: flex;
+        margin: 0 12px;
+    }
+
+    &__container{
+        height: 300vh;
+    }
+         
+         
+    &__sticky{
+        overflow: hidden;
+        position: sticky;
+        top: 15%;
+        height: 120vh;
+    }
+         
+         
+    &__scroll{
+        top: 0;
+        height: 100%;
+        width: 498vw;
+        will-change: transform;
+        display: flex;
+        /* si enleve img a coté */
+        justify-content: space-between;
+        margin: 0 5px;
+    }
+
+    &__bloc{
+        margin: 36px 18px 0 0;
+    }
+}
+// TABLETTE
+@media(min-width:768px){
+    .stage{
+     
+        &__container{
+            height: 400vh;
+        }
+     
+     
+        &__sticky{
+            overflow: hidden;
+            position: sticky;
+            top: 15%;
+            height: 100vh;
+        }
+     
+     
+        &__scroll{
+            top: 0;
+            height: 100%;
+            width: 498vw;
+            will-change: transform;
+            display: flex;
+            /* si enleve img a coté */
+            justify-content: space-between;
+            padding: 0 5vw;
+        }
+     
+     
+        &__grille{
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: auto;
+            gap: 0 20px;
+        }
+     
+     
+        &__title{
+            text-align: start;
+            grid-column: 2/6;
+            font-size: 101px;
+            line-height: 80%;
+            color: #D696C3;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 200;
+        }
+     
+     
+        &__contenu{
+            display: flex;
+            margin: 0 120px;
+        }
+     
+     
+        &__secondtitle{
+            font-size: 68px;
+            line-height: 100%;
+            color: #D696C3;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 200;
+        }
+     
+     
+            p{
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 150%;
+                font-family: "IBM Plex Serif", serif;
+                width: 600px;
+            }
+        
+        &__bloc{
+                margin: 60px 40px 0;
+        }
+    }
+}
+// DESKTOP
+@media(min-width:1200px){
+    .stage{
+        background-color: #2E4A66;
+     
+     
+        &__container{
+            height: 230vh;
+        }
+     
+     
+        &__sticky{
+            overflow: hidden;
+            position: sticky;
+            top: 15%;
+            height: 100vh;
+        }
+     
+     
+        &__scroll{
+            top: 0;
+            height: 100%;
+            width: 498vw;
+            will-change: transform;
+            display: flex;
+            /* si enleve img a coté */
+            justify-content: space-between;
+            padding: 0 5vw;
+        }
+     
+     
+        &__grille{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            gap: 0 20px;
+        }
+     
+     
+        &__title{
+            margin-bottom: 40px;
+            grid-column: 2/7;
+            font-size: 152px;
+            line-height: 80%;
+            color: #D696C3;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 200;
+        }
+     
+     
+        &__contenu{
+            display: flex;
+            margin: 0 120px;
+        }
+     
+     
+        &__secondtitle{
+            font-size: 68px;
+            line-height: 100%;
+            color: #D696C3;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 200;
+        }
+     
+     
+            p{
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 150%;
+                font-family: "IBM Plex Serif", serif;
+                width: 600px;
+            }
+        
+        &__bloc{
+            margin: 60px 40px 0;
+        }
+    }
+}
+
+// SECTION 5 -- AFTER EFFECTS ///////////////////////////////////////////////
+.aftereffects{
+    background-color: #2E4A66;
+
+    &__title{
+        display: flex;
+        color: #D696C3;
+        font-size: 27px;
+        line-height: 100%;
+        justify-content: center;
+    }
+
+    &__para{
+
+        p{
+            font-size: 18px;
+            line-height: 150%;
+            font-family: "IBM Plex Serif", serif;
+            padding: 18px 18px 0;
+        }
+    }
+
+    &__rux{
+        margin-top: 36px;
+        width: 100%;
+    }
+}
+// TABLETTE
+@media(min-width:768px){
+    .aftereffects{
+        background-color: #2E4A66 ;
+    
+        &__title{
+            font-size: 101px;
+            line-height: 100%;
+            color: #D696C3;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 200;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    
+        &__para{
+            display: flex;
+            justify-content: center;
+    
+            p{
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 150%;
+                font-family: "IBM Plex Serif", serif;
+                text-align: center;
+                width: 600px;
+            }
+        }
+
+        &__rux{
+            display: none;
+        }
+    }
+}
+// DESKTOP
+@media(min-width:1200px){
+    .aftereffects{
+        background-color: #2E4A66 ;
+    
+        &__title{
+            font-size: 101px;
+            line-height: 100%;
+            color: #D696C3;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 200;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    
+        &__para{
+            display: flex;
+            justify-content: center;
+    
+            p{
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 150%;
+                font-family: "IBM Plex Serif", serif;
+                text-align: center;
+                width: 600px;
+            }
+        }
+
+        &__rux{
+            display: none;
+        }
+    }
+}
+
+// SECTION 6 -- PHOTOSHOP ////////////////////////////////////////////////////
+.photoshop{
+    background-color: #2E4A66;
+
+    &__title{
+        padding-top: 72px;
+        display: flex;
+        color: #D696C3;
+        font-size: 27px;
+        line-height: 100%;
+        justify-content: center;
+    }
+
+    &__grid{
+
+        p{
+            font-size: 18px;
+            line-height: 150%;
+            font-family: "IBM Plex Serif", serif;
+            padding: 18px 18px 0;
+        }
+    }
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__poster{
+        margin: 36px 18px 0;
+        width: 324px;
+    }
+}
+// TABLETTE
+@media(min-width:768px){
+    .photoshop{
+        background-color: #2E4A66;
+    
+        &__grille{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            gap: 0 20px;
+        }
+    
+        &__title{
+            display: block;
+            grid-column: 2/ 8;
+            padding-top: 200px;
+            font-size: 101px;
+            line-height: 100%;
+            color: #D696C3;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 200;
+            margin-bottom: 20px;
+        }
+    
+        &__grid{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            gap: 0 20px;
+            position: relative  ;
+    
+            :nth-child(1){
+                grid-column: 2/7;
+            }
+            :nth-child(2){
+                grid-column: 2/7;
+            }
+            :nth-child(3){
+                grid-column: 8/10;
+                position: absolute;
+            }
+        }
+    
+        p{
+            padding: 0;
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 150%;
+            font-family: "IBM Plex Serif", serif;
+        }
+    
+        &__poster{
+            object-fit: cover;
+            width: 216px;
+            height: 100%;
+        }
+    }
+}
+// DESKTOP
+@media(min-width:1200px){
+    .photoshop{
+        background-color: #2E4A66;
+    
+        &__grille{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            gap: 0 20px;
+        }
+    
+        &__title{
+            display: block;
+            grid-column: 2/ 8;
+            padding-top: 200px;
+            font-size: 101px;
+            line-height: 100%;
+            color: #D696C3;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 200;
+            margin-bottom: 20px;
+        }
+    
+        &__grid{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            gap: 0 20px;
+            position: relative  ;
+    
+            :nth-child(1){
+                grid-column: 2/7;
+            }
+            :nth-child(2){
+                grid-column: 2/7;
+            }
+            :nth-child(3){
+                grid-column: 8/10;
+                position: absolute;
+            }
+        }
+    
+        p{
+            padding: 0;
+            margin-top: 20px;
+            font-size: 20px;
+            line-height: 150%;
+            font-family: "IBM Plex Serif", serif;
+        }
+    
+        &__poster{
+            object-fit: cover;
+            width: 216px;
+            height: 100%;
+        }
+    }
+}
+
+// SECTION 7 -- FOOTER
+.footer{
+    padding-top: 108px;
+    background-color: #2E4A66;
+
+    &__menu{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        gap: 18px;
+        list-style-type: none;
+        justify-content: space-between;
+        margin: 0 18px;
+        font-family: "IBM Plex Serif", serif;
+
+        :nth-child(1){
+            grid-column: 1/3;
+        }
+        :nth-child(2){
+            grid-column: 4/5;
+        }
+        :nth-child(3){
+            grid-column: 5/6;
+        }
+        :nth-child(4){
+            grid-column: 6/7;
+        }
+    }
+
+    &__el{
+        font-size: 18px;
+        line-height: 150%;
+
+        a{
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+    }
+
+    &__container{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        gap: 18px;
+        margin: 0 18px 18px;
+
+        div{
+            width: 100%;
+            height: 1px;
+            background-color: #FFFFFF;
+            grid-column: 1/7;
+        }
+    }
+
+    &__end{
+        height: 36px;
+        background-color: #2E4A66;
     }
 }

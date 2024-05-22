@@ -9,8 +9,8 @@ function linkTrigger(event) {
    event.preventDefault(); // Empêche le comportement par défaut du lien
 
    // Désactive tous les liens actifs
-   let list = event.currentTarget.closest("a");
-   let activeLinks = list.querySelectorAll(".projet__linktab--active");
+//    let list = event.currentTarget.closest("a");
+   let activeLinks = document.querySelectorAll(".projet__linktab");
    for (let activeLink of activeLinks) {
        activeLink.classList.remove("projet__linktab--active");
    }
@@ -31,7 +31,7 @@ function linkTrigger(event) {
 }
 
 //Scroll horizontal
-const stickySections = [...document.querySelectorAll('.section4__sticky')];
+const stickySections = [...document.querySelectorAll('.stage__sticky')];
 
 window.addEventListener('scroll', () => {
     for (let i = 0; i < stickySections.length; i++) {
@@ -41,7 +41,7 @@ window.addEventListener('scroll', () => {
 
 function transform(section) {
     const offsetTop = section.parentElement.offsetTop;
-    const scrollSection = section.querySelector('.section4__scroll');
+    const scrollSection = section.querySelector('.stage__scroll');
 
     let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
     percentage = percentage < 0 ? 0 :  percentage > 400 ? 400 : percentage;
