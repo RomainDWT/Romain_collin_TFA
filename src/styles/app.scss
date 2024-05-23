@@ -423,6 +423,15 @@ body{
         );
     }
 }
+.projet__tabcontent {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out; /* Ajout de la transition pour une ouverture et fermeture fluides */
+}
+
+.projet__tabcontent.projet__tabcontent--visible {
+    max-height: 500px; /* Définition de la hauteur maximale pour afficher le contenu */
+}
 // TABLETTE
 @media(min-width:768px){
     .projet{
@@ -557,7 +566,7 @@ body{
     &__scroll{
         top: 0;
         height: 100%;
-        width: 498vw;
+        width: 400vw;
         will-change: transform;
         display: flex;
         /* si enleve img a coté */
@@ -580,14 +589,7 @@ body{
      
      
         &__scroll{
-            top: 0;
-            height: 100%;
             width: 350vw;
-            will-change: transform;
-            display: flex;
-            /* si enleve img a coté */
-            justify-content: space-between;
-            padding: 0 5vw;
         }
      
      
@@ -604,32 +606,22 @@ body{
             grid-column: 2/6;
             font-size: 101px;
             line-height: 80%;
-            color: #D696C3;
-            font-family: "Bebas Neue", sans-serif;
-            font-weight: 200;
         }
      
      
         &__contenu{
-            display: flex;
             margin: 0 120px;
         }
      
      
         &__secondtitle{
             font-size: 68px;
-            line-height: 100%;
-            color: #D696C3;
-            font-family: "Bebas Neue", sans-serif;
-            font-weight: 200;
         }
      
      
             p{
                 margin-top: 20px;
                 font-size: 20px;
-                line-height: 150%;
-                font-family: "IBM Plex Serif", serif;
                 width: 600px;
             }
         
@@ -641,31 +633,20 @@ body{
 // DESKTOP
 @media(min-width:1200px){
     .stage{
-        background-color: #2E4A66;
-     
-     
+
         &__container{
             height: 230vh;
         }
      
      
         &__sticky{
-            overflow: hidden;
-            position: sticky;
-            top: 15%;
+            top: 12%;
             height: 100vh;
         }
      
      
         &__scroll{
-            top: 0;
-            height: 100%;
             width: 498vw;
-            will-change: transform;
-            display: flex;
-            /* si enleve img a coté */
-            justify-content: space-between;
-            padding: 0 5vw;
         }
      
      
@@ -681,45 +662,196 @@ body{
             margin-bottom: 40px;
             grid-column: 2/7;
             font-size: 152px;
-            line-height: 80%;
-            color: #D696C3;
-            font-family: "Bebas Neue", sans-serif;
-            font-weight: 200;
         }
      
      
         &__contenu{
-            display: flex;
             margin: 0 120px;
         }
      
      
         &__secondtitle{
             font-size: 68px;
-            line-height: 100%;
-            color: #D696C3;
-            font-family: "Bebas Neue", sans-serif;
-            font-weight: 200;
-        }
-     
-     
-            p{
-                margin-top: 20px;
-                font-size: 20px;
-                line-height: 150%;
-                font-family: "IBM Plex Serif", serif;
-                width: 600px;
-            }
-        
-        &__bloc{
-            margin: 60px 40px 0;
         }
     }
 }
 
-// SECTION 5 -- AFTER EFFECTS ///////////////////////////////////////////////
+// SECTION 5 -- AFTER EFFECTS ////////////////////////////////////////////////////////
+.aftereffects{
+    background-color: #2E4A66;
 
+    &__title{
+        font-size: 27px;
+        line-height: 100%;
+        color: #D696C3;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 200;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    p{
+        font-size: 18px;
+        color: #FFFFFF;
+        line-height: 150%;
+        font-family: "IBM Plex Serif", serif;
+        margin: 0 18px;
+    }
+
+    &__grid{
+        margin: 18px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        gap: 0 18px;
+    }
+
+    &__rux{
+        width: 100%;
+        grid-column: 1/7;
+    }
+
+    &__container{
+        display: none;
+    }
+}
+// TABLETTE
+@media(min-width:768px){
+    .aftereffects{
+
+        &__title{
+            font-size: 68px;
+            margin-bottom: 20px;
+        }
+
+        p{
+            font-size: 20px;
+            text-align: center;
+            margin: 0 100px;
+        }
+
+        &__rux{
+            display: none;
+        }
+
+        &__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__edit{
+            margin-top: 80px;
+            width: 400px;
+        }
+
+        &__edit1{
+            display: none;
+        }
+
+        &__edit2{
+            display: none;
+        }
+        &__edit3{
+            display: none;
+        }
+    }
+}
+// DESKTOP
+@media(min-width:1200px){
+    .aftereffects{
+
+        &__title{
+            font-size: 101px;
+            margin-bottom: 40px;
+        }
+
+        p{
+            font-size: 20px;
+            text-align: center;
+            margin: 0 400px;
+        }
+
+        &__container{
+            display: grid;
+            grid-template-columns: repeat(13, 1fr);
+            grid-template-rows: auto;
+            gap: 0 40px;
+        }
+
+        &__edit{
+            display: none;
+        }
+        &__edit1{
+            margin-top: 90px;
+            display: block;
+            grid-column: 3/6;
+            width: 100%;
+        }
+        &__edit2{
+            margin-top: 40px;
+            display: block;
+            grid-column: 6/9;
+            width: 100%;
+        }
+        &__edit3{
+            margin-top: 90px;
+            display: block;
+            grid-column: 9/12;
+            width: 100%;
+        }
+    }
+}
+
+// SECTION 6 -- PHOTOSHOP
+.photoshop{
+    background-color: #2E4A66;
+
+    &__title{
+        font-size: 27px;
+        line-height: 100%;
+        color: #D696C3;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 200;
+        text-align: center;
+        padding: 80px 0 18px;
+    }
+
+    p{
+        font-size: 18px;
+        color: #FFFFFF;
+        line-height: 150%;
+        font-family: "IBM Plex Serif", serif;
+        margin: 0 18px;
+    }
+
+    &__container{
+
+        :nth-child(3){
+            margin-top: 18px;
+        }
+    }
+
+    &__posterbox{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        gap: 0 20px;
+        margin: 36px 18px 0;
+    }
+
+    &__poster{
+        grid-column: 2/6;
+        width: 100%;
+    }
+}
  
+
+
+
+
+
+
 
 // SECTION 7 -- FOOTER
 .footer{

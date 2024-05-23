@@ -3,27 +3,32 @@
 let links = document.querySelectorAll(".projet__linktab");
 
 for (let link of links) {
-    link.addEventListener('click', () =>{
+    link.addEventListener('click', (event) => {
         event.preventDefault();
 
-        if(link.classList.contains("projet__linktab--active")){
+        if (link.classList.contains("projet__linktab--active")) {
             clearAll();
             link.classList.remove("projet__linktab--active");
             let contentId = link.getAttribute("href");
             let content = document.querySelector(contentId);
-            content.classList.add("projet__hidden");
-
-        } else{
-            clearAll()
+            content.classList.remove("projet__tabcontent--visible");
+            setTimeout(() => {
+                content.classList.add("projet__hidden");
+            }, 300); // Attendez la fin de la transition avant de cacher le contenu
+        } else {
+            clearAll();
             link.classList.add("projet__linktab--active");
             let contentId = link.getAttribute("href");
             let content = document.querySelector(contentId);
             content.classList.remove("projet__hidden");
+            setTimeout(() => {
+                content.classList.add("projet__tabcontent--visible");
+            }, 10); // Attendez un bref délai avant d'ajouter la classe visible pour déclencher la transition
         }
-    })
+    });
 }
 
-function clearAll(){
+function clearAll() {
     let activeLinks = document.querySelectorAll(".projet__linktab");
     for (let activeLink of activeLinks) {
         activeLink.classList.remove("projet__linktab--active");
@@ -32,6 +37,7 @@ function clearAll(){
     let tabs = document.querySelectorAll(".projet__tabcontent");
     for (let tab of tabs) {
         tab.classList.add("projet__hidden");
+        tab.classList.remove("projet__tabcontent--visible");
     }
 }
 

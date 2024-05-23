@@ -347,6 +347,16 @@ body {
   background: linear-gradient(to bottom, #4C606B, #2E4A66);
 }
 
+.projet__tabcontent {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out; /* Ajout de la transition pour une ouverture et fermeture fluides */
+}
+
+.projet__tabcontent.projet__tabcontent--visible {
+  max-height: 500px; /* Définition de la hauteur maximale pour afficher le contenu */
+}
+
 @media (min-width: 768px) {
   .projet__container2 {
     display: grid;
@@ -448,7 +458,7 @@ body {
 .stage__scroll {
   top: 0;
   height: 100%;
-  width: 498vw;
+  width: 400vw;
   will-change: transform;
   display: flex;
   /* si enleve img a coté */
@@ -465,14 +475,7 @@ body {
     height: 100vh;
   }
   .stage__scroll {
-    top: 0;
-    height: 100%;
     width: 350vw;
-    will-change: transform;
-    display: flex;
-    /* si enleve img a coté */
-    justify-content: space-between;
-    padding: 0 5vw;
   }
   .stage__grille {
     display: grid;
@@ -485,26 +488,16 @@ body {
     grid-column: 2/6;
     font-size: 101px;
     line-height: 80%;
-    color: #D696C3;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 200;
   }
   .stage__contenu {
-    display: flex;
     margin: 0 120px;
   }
   .stage__secondtitle {
     font-size: 68px;
-    line-height: 100%;
-    color: #D696C3;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 200;
   }
   .stage p {
     margin-top: 20px;
     font-size: 20px;
-    line-height: 150%;
-    font-family: "IBM Plex Serif", serif;
     width: 600px;
   }
   .stage__bloc {
@@ -512,27 +505,15 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  .stage {
-    background-color: #2E4A66;
-  }
   .stage__container {
     height: 230vh;
   }
   .stage__sticky {
-    overflow: hidden;
-    position: sticky;
-    top: 15%;
+    top: 12%;
     height: 100vh;
   }
   .stage__scroll {
-    top: 0;
-    height: 100%;
     width: 498vw;
-    will-change: transform;
-    display: flex;
-    /* si enleve img a coté */
-    justify-content: space-between;
-    padding: 0 5vw;
   }
   .stage__grille {
     display: grid;
@@ -544,33 +525,152 @@ body {
     margin-bottom: 40px;
     grid-column: 2/7;
     font-size: 152px;
-    line-height: 80%;
-    color: #D696C3;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 200;
   }
   .stage__contenu {
-    display: flex;
     margin: 0 120px;
   }
   .stage__secondtitle {
     font-size: 68px;
-    line-height: 100%;
-    color: #D696C3;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 200;
-  }
-  .stage p {
-    margin-top: 20px;
-    font-size: 20px;
-    line-height: 150%;
-    font-family: "IBM Plex Serif", serif;
-    width: 600px;
-  }
-  .stage__bloc {
-    margin: 60px 40px 0;
   }
 }
+.aftereffects {
+  background-color: #2E4A66;
+}
+.aftereffects__title {
+  font-size: 27px;
+  line-height: 100%;
+  color: #D696C3;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.aftereffects p {
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 150%;
+  font-family: "IBM Plex Serif", serif;
+  margin: 0 18px;
+}
+.aftereffects__grid {
+  margin: 18px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  gap: 0 18px;
+}
+.aftereffects__rux {
+  width: 100%;
+  grid-column: 1/7;
+}
+.aftereffects__container {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .aftereffects__title {
+    font-size: 68px;
+    margin-bottom: 20px;
+  }
+  .aftereffects p {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 100px;
+  }
+  .aftereffects__rux {
+    display: none;
+  }
+  .aftereffects__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aftereffects__edit {
+    margin-top: 80px;
+    width: 400px;
+  }
+  .aftereffects__edit1 {
+    display: none;
+  }
+  .aftereffects__edit2 {
+    display: none;
+  }
+  .aftereffects__edit3 {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .aftereffects__title {
+    font-size: 101px;
+    margin-bottom: 40px;
+  }
+  .aftereffects p {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 400px;
+  }
+  .aftereffects__container {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: auto;
+    gap: 0 40px;
+  }
+  .aftereffects__edit {
+    display: none;
+  }
+  .aftereffects__edit1 {
+    margin-top: 90px;
+    display: block;
+    grid-column: 3/6;
+    width: 100%;
+  }
+  .aftereffects__edit2 {
+    margin-top: 40px;
+    display: block;
+    grid-column: 6/9;
+    width: 100%;
+  }
+  .aftereffects__edit3 {
+    margin-top: 90px;
+    display: block;
+    grid-column: 9/12;
+    width: 100%;
+  }
+}
+.photoshop {
+  background-color: #2E4A66;
+}
+.photoshop__title {
+  font-size: 27px;
+  line-height: 100%;
+  color: #D696C3;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  padding: 80px 0 18px;
+}
+.photoshop p {
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 150%;
+  font-family: "IBM Plex Serif", serif;
+  margin: 0 18px;
+}
+.photoshop__container :nth-child(3) {
+  margin-top: 18px;
+}
+.photoshop__posterbox {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  gap: 0 20px;
+  margin: 36px 18px 0;
+}
+.photoshop__poster {
+  grid-column: 2/6;
+  width: 100%;
+}
+
 .footer {
   padding-top: 108px;
   background-color: #2E4A66;
