@@ -347,16 +347,6 @@ body {
   background: linear-gradient(to bottom, #4C606B, #2E4A66);
 }
 
-.projet__tabcontent {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.3s ease-out; /* Ajout de la transition pour une ouverture et fermeture fluides */
-}
-
-.projet__tabcontent.projet__tabcontent--visible {
-  max-height: 500px; /* Définition de la hauteur maximale pour afficher le contenu */
-}
-
 @media (min-width: 768px) {
   .projet__container2 {
     display: grid;
@@ -721,4 +711,56 @@ body {
 .footer__end {
   height: 36px;
   background-color: #2E4A66;
+}
+
+.projet__image-container {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.projet__image {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+.projet__linktab {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .projet__image {
+    width: 300px;
+  }
+}
+.projet__projet--hover {
+  position: relative;
+  padding: 0 15px;
+}
+
+.projet__projet--hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #2E4A66;
+  z-index: -1;
+  transition: 0.2s all;
+}
+
+.projet__projet--hover:hover::before {
+  width: 160px;
+}
+
+.projet__projet--hover:hover {
+  color: #D696C3;
+}
+
+@media (min-width: 768px) {
+  .projet__projet--hover:hover::before {
+    width: 250px;
+  }
 }/*# sourceMappingURL=app.css.map */

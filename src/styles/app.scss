@@ -423,15 +423,6 @@ body{
         );
     }
 }
-.projet__tabcontent {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease-out; /* Ajout de la transition pour une ouverture et fermeture fluides */
-}
-
-.projet__tabcontent.projet__tabcontent--visible {
-    max-height: 500px; /* Définition de la hauteur maximale pour afficher le contenu */
-}
 // TABLETTE
 @media(min-width:768px){
     .projet{
@@ -845,6 +836,53 @@ body{
         width: 100%;
     }
 }
+// TABLETTE 
+@media(min-width:768px){
+    .photoshop{
+
+        &__title{
+            padding-top: 160px;
+            font-size: 101px;
+        }
+
+        p{
+            font-size: 20px;
+            margin: 22px 145px 0;
+        }
+
+        &__posterbox{
+            margin: 80px 18px 0;
+        }
+    }
+}
+// DESKTOP
+@media(min-width:1200px){
+    .photoshop{
+
+        &__title{
+            text-align: start;
+            padding: 0px 0 18px;
+        }
+
+        p{
+            margin: 0;
+        }
+
+        &__container{
+            padding-top: 200px;
+            display: flex;
+            gap: 140px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__poster{
+            width: 400px;
+        }
+    }
+}
+
  
 
 
@@ -910,5 +948,54 @@ body{
     &__end{
         height: 36px;
         background-color: #2E4A66;
+    }
+}
+
+
+// HOVER DES LIENS /////////////////////////////////////////////
+.projet__image-container {
+    position: absolute;
+    display: none; 
+    pointer-events: none; 
+    z-index: 1000;
+}
+.projet__image {
+    width: 200px; 
+    height: auto;
+    display: block;
+}
+.projet__linktab {
+    position: relative;
+}
+@media(min-width:768px){
+    .projet__image {
+        width: 300px; 
+    }
+}
+
+// HOVER DES LIENS "visiter le projet" du system tabs
+.projet__projet--hover{
+    position: relative;
+    padding: 0 15px;
+}
+.projet__projet--hover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #2E4A66;
+    z-index: -1;
+    transition: .2s all;
+}
+.projet__projet--hover:hover::before{
+    width: 160px;
+}
+.projet__projet--hover:hover{
+    color: #D696C3;
+}
+@media(min-width:768px){
+    .projet__projet--hover:hover::before{
+        width: 250px;
     }
 }
