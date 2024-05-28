@@ -17,6 +17,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 body {
@@ -736,28 +737,35 @@ body {
     margin-top: 40px;
   }
 }
-.projet__image-container {
-  position: absolute;
-  display: none;
-  pointer-events: none;
-  z-index: 1000;
-}
-
 .projet__image {
-  width: 200px;
-  height: auto;
-  display: block;
+  display: none;
 }
 
-.projet__linktab {
-  position: relative;
-}
-
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
+  .projet__image-container {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    z-index: 1000;
+  }
   .projet__image {
+    display: block;
     width: 300px;
+    height: auto;
+    display: block;
+  }
+  .projet__linktab {
+    position: relative;
   }
 }
+.projet__linktab {
+  transition: color 0.5s ease;
+}
+
+.projet__linktab:hover {
+  color: #D696C3;
+}
+
 .projet__projet--hover {
   position: relative;
   padding: 0 15px;
@@ -786,4 +794,12 @@ body {
   .projet__projet--hover:hover::before {
     width: 250px;
   }
+}
+.a--hover {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.a--hover:hover {
+  opacity: 0.5;
 }/*# sourceMappingURL=app.css.map */
