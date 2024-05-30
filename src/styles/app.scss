@@ -88,16 +88,19 @@ body{
             letter-spacing: 2px;
     
             :nth-child(1){
+                padding-top: 4px;
                 display: block;
                 text-decoration: none;
                 color: #FFFFFF;
             }
             :nth-child(2){
+                padding-top: 4px;
                 display: block;
                 text-decoration: none;
                 color: #FFFFFF;
             }
             :nth-child(3){
+                padding-top: 4px;
                 display: block;
                 text-decoration: none;
                 color: #FFFFFF;
@@ -221,11 +224,6 @@ body{
 }
 
 //SECTION 2 -- ABOUT ME ///////////////////////////////////////////////////////
-.aboutme__width{
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-}
 .aboutme{
     background-color: #28425B;
 
@@ -450,17 +448,17 @@ body{
         }
 
         &__projet{
-            margin: 20px 0 40px;
+            margin: 30px 0 40px;
             font-size: 30px;
         }
 
         &__tabcontent{
         
             :nth-child(1){
+                width: 600px;
                 font-size: 20px;
             }
         }
-
 
         &__grille{
             grid-template-columns: repeat(10, 1fr);
@@ -852,7 +850,13 @@ body{
         }
 
         &__posterbox{
+            display: flex;
+            justify-content: center;
             margin: 80px 18px 0;
+        }
+
+        &__poster{
+            width: 400px;
         }
     }
 }
@@ -879,6 +883,8 @@ body{
         }
 
         &__poster{
+            position: relative;
+            top: -43px;
             width: 400px;
         }
     }
@@ -998,6 +1004,89 @@ body{
     }
 }
 
+// PAGE UI KIT //////////////////////////////////////////////////////////////
+.uikit{
+    background: linear-gradient(
+        to bottom,
+        #28425B,
+        #2E4A66,
+    );
+
+    &__title{
+        text-align: start;
+    }
+
+    &__secondtitle{
+        margin: 18px 18px 0;
+    }
+
+    p{
+        font-size: 18px;
+        margin: 18px 18px 0;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 36px;
+    }
+
+    &__container div{
+        width: 100px;
+        height: 100px;   
+    }
+
+    &__color1{
+        background-color: #4C606B;
+    }
+    &__color2{
+        background-color: #D696C3;
+    }
+    &__color3{
+        background-color: #28405C;
+    }
+}
+// TABLETTE
+@media(min-width:768px){
+    .uikit{
+
+        &__title{
+            margin: 0 40px;
+        }
+
+        &__secondtitle{
+            margin: 20px 40px 0;
+        }
+
+        p{
+            font-size: 20px;
+            margin: 20px 40px 0;
+        }
+
+        &__container{
+            margin: 0 80px;
+        }
+
+        &__container div{
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+// DESKTOP
+@media(min-width:1200px){
+    .uikit{
+
+        &__container{
+            margin: 0 100px;
+        }
+
+        &__container div{
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
 
 // HOVER DES LIENS //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1061,5 +1150,8 @@ body{
     transition: opacity 0.50s ease;
 }
 .a--hover:hover{
+    opacity: 0.5;
+}
+.footer__el--active{
     opacity: 0.5;
 }
