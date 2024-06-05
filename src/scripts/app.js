@@ -43,18 +43,23 @@ gsap.registerPlugin(ScrollTrigger);
         let hoverLinks = document.querySelectorAll(".projet__copia, .projet__readimade, .projet__helloworld, .projet__decembre, .projet__rux, .projet__dataplay");
         let imageContainer = document.querySelector(".projet__image-container");
         let image = document.querySelector(".projet__image");
-
+        
         hoverLinks.forEach(link => {
             link.addEventListener('mouseover', () => {
-                let imageUrl = link.getAttribute("data-image");
-                image.src = imageUrl;
+                let imageUrl1x = link.getAttribute("data-image-1x");
+                let imageUrl2x = link.getAttribute("data-image-2x");
+        
+                image.src = imageUrl1x;
+                image.srcset = `${imageUrl1x} 1x, ${imageUrl2x} 2x`;
+                image.loading = "lazy";
+                image.decoding = "async";
                 imageContainer.style.display = "block";
             });
-
+        
             link.addEventListener('mouseout', () => {
                 imageContainer.style.display = "none";
             });
-
+        
             link.addEventListener('mousemove', (event) => {
                 imageContainer.style.top = (event.pageY + 20) + 'px';
                 imageContainer.style.left = (event.pageX + 20) + 'px';
