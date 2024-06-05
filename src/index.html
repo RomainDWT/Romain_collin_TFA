@@ -338,7 +338,12 @@
             </p>
           </div>
           <div class="photoshop__posterbox">
-            <img class="photoshop__poster" src="assets/images/poster.jpg" alt="Le poster de mon projet dataplay">
+            <img class="photoshop__poster" src="assets/images/poster@1x.jpg"
+            alt="Le poster de mon projet dataplay"
+            srcset="assets/images/poster@1x.jpg 1x,
+                    assets/images/poster@2x.jpg 2x"
+            loading="lazy"
+            decoding="async">
           </div>
         </div>
       </section>
