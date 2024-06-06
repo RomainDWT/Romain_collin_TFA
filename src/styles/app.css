@@ -325,12 +325,18 @@ body {
   color: #FFFFFF;
 }
 
+.title--medium {
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 100%;
+  font-weight: 400;
+}
+
 .title {
   text-align: center;
   margin-top: 72px;
-  font-family: "Bebas Neue", sans-serif;
   color: #FFFFFF;
   font-size: 91px;
+  font-family: "Bebas Neue", sans-serif;
   line-height: 100%;
   font-weight: 400;
 }
@@ -399,12 +405,9 @@ body {
   background-color: #28425B;
 }
 .aboutme__title {
-  font-family: "Bebas Neue", sans-serif;
   color: #D696C3;
   font-size: 41px;
-  line-height: 100%;
   text-align: center;
-  font-weight: 400;
   margin: 0 18px;
 }
 .aboutme p.para--first {
@@ -495,12 +498,9 @@ body {
 }
 .projet__title {
   margin-bottom: 36px;
-  font-family: "Bebas Neue", sans-serif;
   color: #FFFFFF;
   font-size: 41px;
-  line-height: 100%;
   text-align: center;
-  font-weight: 200;
 }
 .projet__linktab {
   font-family: "Bebas Neue", sans-serif;
@@ -614,19 +614,13 @@ body {
 }
 .stage__title {
   font-size: 41px;
-  line-height: 100%;
   color: #D696C3;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
   text-align: center;
   margin-bottom: 18px;
 }
 .stage__secondtitle {
   font-size: 27px;
-  line-height: 100%;
   color: #D696C3;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 200;
   letter-spacing: 1px;
 }
 .stage p {
@@ -732,10 +726,7 @@ body {
 }
 .aftereffects__title {
   font-size: 27px;
-  line-height: 100%;
   color: #D696C3;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 200;
   text-align: center;
   margin-bottom: 18px;
 }
@@ -836,10 +827,7 @@ body {
 }
 .photoshop__title {
   font-size: 27px;
-  line-height: 100%;
   color: #D696C3;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 200;
   text-align: center;
   padding: 80px 0 18px;
 }
