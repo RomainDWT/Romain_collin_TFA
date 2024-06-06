@@ -1,19 +1,4 @@
 @charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 70px;
-}
-
-body {
-  background-color: #4C606B;
-  color: #FFFFFF;
-}
-
 .header {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -107,6 +92,21 @@ body {
     margin-right: 40px;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  background-color: #4C606B;
+  color: #FFFFFF;
+}
+
 .title {
   text-align: center;
   margin-top: 72px;
