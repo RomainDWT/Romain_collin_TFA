@@ -1,0 +1,83 @@
+// PAGE UI KIT //////////////////////////////////////////////////////////////
+.uikit{
+    background: linear-gradient(
+        to bottom,
+        #28425B,
+        #2E4A66,
+    );
+
+    &__title{
+        text-align: start;
+    }
+
+    &__secondtitle{
+        margin: 18px 18px 0;
+    }
+
+    p{
+        font-size: 18px;
+        margin: 18px 18px 0;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 36px;
+    }
+
+    &__container div{
+        width: 100px;
+        height: 100px;   
+    }
+
+    &__color1{
+        background-color: #4C606B;
+    }
+    &__color2{
+        background-color: #D696C3;
+    }
+    &__color3{
+        background-color: #28405C;
+    }
+}
+// TABLETTE
+@media(min-width:768px){
+    .uikit{
+
+        &__title{
+            margin: 0 40px;
+        }
+
+        &__secondtitle{
+            margin: 20px 40px 0;
+        }
+
+        p{
+            font-size: 20px;
+            margin: 20px 40px 0;
+        }
+
+        &__container{
+            margin: 0 80px;
+        }
+
+        &__container div{
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+// DESKTOP
+@media(min-width:1200px){
+    .uikit{
+
+        &__container{
+            margin: 0 100px;
+        }
+
+        &__container div{
+            width: 200px;
+            height: 200px;
+        }
+    }
+}

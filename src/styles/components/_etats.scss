@@ -1,0 +1,66 @@
+// HOVER DES LIENS //////////////////////////////////////////////////////////////////////////////////////////////
+// HOVER APPARITION DES PHOTOS SUR PROJETS
+.projet__image{
+    display: none;
+}
+@media(min-width:1200px){
+    .projet__image-container {
+        position: absolute;
+        display: none; 
+        pointer-events: none; 
+        z-index: 1000;
+    }
+    .projet__image {
+        display: block;
+        width: 300px; 
+        height: auto;
+        display: block;
+    }
+    .projet__linktab {
+        position: relative;
+    } 
+}
+// HOVER des titres des projets
+.projet__linktab{
+    transition: color 0.50s ease;
+}
+.projet__linktab:hover{
+    color: #D696C3;
+}
+// HOVER DES LIENS "visiter le projet" du system tabs
+.projet__projet--hover{
+    position: relative;
+    padding: 0 15px;
+}
+.projet__projet--hover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #2E4A66;
+    z-index: -1;
+    transition: .2s all;
+}
+.projet__projet--hover:hover::before{
+    width: 160px;
+}
+.projet__projet--hover:hover{
+    color: #D696C3;
+}
+@media(min-width:768px){
+    .projet__projet--hover:hover::before{
+        width: 250px;
+    }
+}
+// HOVER pour les liens du header et du footer
+.a--hover{
+    opacity: 1;
+    transition: opacity 0.50s ease;
+}
+.a--hover:hover{
+    opacity: 0.5;
+}
+.footer__el--active{
+    opacity: 0.5;
+}
