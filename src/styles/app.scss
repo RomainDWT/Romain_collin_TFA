@@ -240,6 +240,7 @@ body{
     p.para--first{
         margin: 36px 18px 18px;
     }
+    
     p{
         margin: 0 18px;
         font-size: 18px;
@@ -319,6 +320,7 @@ body{
         &__grille{
             grid-template-columns: repeat(12, 1fr);
         }
+
         &__title{
             z-index: 1;
             font-size: 152px;
@@ -546,15 +548,13 @@ body{
     &__container{
         height: 400vh;
     }
-         
-         
+          
     &__sticky{
         overflow: hidden;
         position: sticky;
         top: 10%;
         height: 90vh;
     }
-         
          
     &__scroll{
         top: 0;
@@ -580,11 +580,9 @@ body{
             height: 100vh;
         }
      
-     
         &__scroll{
             width: 350vw;
         }
-     
      
         &__grille{
             display: grid;
@@ -592,7 +590,6 @@ body{
             grid-template-rows: auto;
             gap: 0 20px;
         }
-     
      
         &__title{
             text-align: start;
@@ -610,7 +607,6 @@ body{
         &__secondtitle{
             font-size: 68px;
         }
-     
      
             p{
                 margin-top: 20px;
@@ -631,17 +627,14 @@ body{
             height: 230vh;
         }
      
-     
         &__sticky{
             top: 12%;
             height: 100vh;
         }
      
-     
         &__scroll{
             width: 498vw;
         }
-     
      
         &__grille{
             display: grid;
@@ -650,18 +643,15 @@ body{
             gap: 0 20px;
         }
      
-     
         &__title{
             margin-bottom: 40px;
             grid-column: 2/7;
             font-size: 152px;
         }
-     
-     
+      
         &__contenu{
             margin: 0 120px;
         }
-     
      
         &__secondtitle{
             font-size: 68px;
